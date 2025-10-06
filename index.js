@@ -20,7 +20,7 @@ const string_calculator = (input) => {
 
     const negative_numbers = number_arr.filter(num => num < 0) // Extract megative numbers
 
-    if (negative_numbers.length) return `"negative numbers not allowed ${negative_numbers.join(",")}"` // Return megative numbers if found
+    if (negative_numbers.length) return `negative numbers not allowed ${negative_numbers.join(",")}` // Return megative numbers if found
 
     return number_arr.reduce(
         (accumulator, currentValue) => accumulator + (+currentValue), 0,
@@ -37,3 +37,5 @@ rl.question('Enter a string: ', (input) => {
     console.log(`Output: ${result}`)
     rl.close();
 });
+
+module.exports = { parse_number, string_calculator };
